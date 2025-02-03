@@ -26,7 +26,6 @@ body {
 h1, h2, h3 {
     line-height: 1.2;
     text-wrap: balance;
-    color: var(--clr-primary);
 }
 
 p, span, li {
@@ -153,3 +152,13 @@ section {
     margin-block: 10rem;
 }
 /****************************** APP *******************************/
+
+
+/****************************** HOME *******************************/
+.hero-section {
+    gap: 5rem;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+}
+/****************************** HOME *******************************/
