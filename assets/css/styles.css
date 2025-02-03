@@ -1,0 +1,155 @@
+:root {
+    --flow: 1rem;
+
+    --clr-text: #050315;
+    --clr-background: #fbfbfe;
+    --clr-primary: #2f27ce;
+    --clr-secondary: #dedcff;
+    --clr-accent: #433bff;
+}
+
+/****************************** RESET CSS *******************************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100svh;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+    text-wrap: balance;
+    color: var(--clr-primary);
+}
+
+p, span, li {
+    max-width: 65ch;
+    text-wrap: pretty;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img, video, picture, svg {
+    display: block;
+    max-width: 100%;
+    border-radius: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: var(--clr-text);
+}
+
+a:hover {
+    color: var(--clr-accent);
+}
+
+button {
+    border: none;
+    font: inherit;
+    cursor: pointer;
+    background: none;
+}
+/****************************** RESET CSS *******************************/
+
+
+/****************************** REUSABLE CSS *******************************/
+    /****************************** STRUCTURE *******************************/
+    .flow > * + * {
+        display: block;
+        margin-top: var(--flow);
+    }
+
+    .flow-xl > * + * {
+        display: block;
+        margin-top: calc(var(--flow) * 10);
+    }
+
+    .flow-lg > * + * {
+        display: block;
+        margin-top: calc(var(--flow) * 2);
+    }
+
+    .flow-sm > * + * {
+        display: block;
+        margin-top: calc(var(--flow) / 2);
+    }
+    /****************************** STRUCTURE *******************************/
+
+
+    /****************************** TYPOGRAPHY *******************************/
+    .text-xl {
+        font-size: 3rem;
+    }
+
+    .text-lg {
+        font-size: 2rem;
+    }
+
+    .text-md {
+        font-size: 1.5rem;
+    }
+
+    .text {
+        font-size: 1rem;
+    }
+
+    .text-sm {
+        font-size: 0.875rem;
+    }
+
+    .text-xs {
+        font-size: 0.75rem;
+    }
+
+    .text-center {
+        text-align: center;
+        margin-inline: auto;
+    }
+    /****************************** TYPOGRAPHY *******************************/
+
+    /****************************** UTILITIES *******************************/
+    .button {
+        padding: .5rem 1rem;
+        border-radius: 5rem;
+        color: var(--clr-background);
+        background: var(--clr-primary);
+    }
+
+    .button:hover {
+        scale: 1.1;
+        background: var(--clr-accent);
+        box-shadow: 0 0 5px 0px var(--clr-secondary);
+    }
+
+    .bx {
+        font-size: 1.5rem;
+    }
+    /****************************** UTILITIES *******************************/
+
+/****************************** REUSABLE CSS *******************************/
+
+
+/****************************** APP *******************************/
+#app {
+    display: grid;
+    grid-template-columns: 1fr min(1000px, 100% - 3rem) 1fr;
+}
+
+#app > * {
+    grid-column: 2 / 3;
+}
+
+section {
+    margin-block: 10rem;
+}
+/****************************** APP *******************************/
