@@ -52,10 +52,10 @@ a:hover {
     color: var(--clr-accent);
 }
 
-button {
+button, input, textarea, select {
     border: none;
+    outline: none;
     font: inherit;
-    cursor: pointer;
     background: none;
 }
 /****************************** RESET CSS *******************************/
@@ -118,8 +118,9 @@ button {
 
     /****************************** UTILITIES *******************************/
     .button {
-        padding: .5rem 1rem;
-        border-radius: 5rem;
+        cursor: pointer;
+        padding: 1rem 1.5rem;
+        border-radius: .5rem;
         color: var(--clr-background);
         background: var(--clr-primary);
     }
@@ -162,6 +163,29 @@ section {
     grid-template-columns: repeat(2, 1fr);
 }
 /****************************** HOME *******************************/
+
+
+/****************************** SUSCRIBE *******************************/
+.suscribe-section {
+    gap: 5rem;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    
+    padding: 5rem;
+    color: white;
+    border-radius: 1rem;
+    background-color: #050315;
+}
+
+.suscribe-form {
+    padding: 1rem;
+    border-radius: .5rem;
+    background-color: white;
+}
+
+
+/****************************** SUSCRIBE *******************************/
 
 
 
