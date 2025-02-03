@@ -162,3 +162,17 @@ section {
     grid-template-columns: repeat(2, 1fr);
 }
 /****************************** HOME *******************************/
+
+
+
+/****************************** FOOTER *******************************/
+.footer {
+    gap: 5rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.footer .main {
+    grid-column: span 2;
+}
+/****************************** FOOTER *******************************/
