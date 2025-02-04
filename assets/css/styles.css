@@ -472,11 +472,15 @@ section {
     }
 
     #button-nav {
+        z-index: 50;
         position: fixed;
         margin-top: 1rem;
         text-align: left;
         width: fit-content;
-        inset: 0 auto auto 1rem;
+        inset: 1rem auto auto 1rem;
+        background: white;
+        padding: .25rem;
+        border-radius: 1rem;
     }
 
     #nav {
@@ -525,6 +529,10 @@ section {
 @media (width < 500px){
     .women-collection {
         grid-row: span 1;
+    }
+
+    .suscribe-section {
+        padding: 2rem 1rem;
     }
     
     .footer .main {
