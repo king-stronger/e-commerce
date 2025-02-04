@@ -11,7 +11,13 @@
 <body>
     <div id="app">
         <nav id="nav" class="nav flow-lg" data-aos="slide-right">
-            <h1>Shop</h1>
+            <div class="brand">
+                <h1 class="text-lg">Shop</h1>
+                <button class="close-nav" id="close-nav">
+                    <i class='bx bx-x'></i>
+                </button>
+            </div>
+
             <ul class="menu">
                 <li class="nav-item">
                     <img src="assets/img/icon/home.svg" alt="" class="nav-icon">
@@ -96,7 +102,10 @@
         </nav>
 
         <div id="main">
-            <section class="hero-section"data-aos="slide-up">
+            <button id="button-nav" class="button-nav">
+                <i class='bx bx-menu-alt-left'></i>
+            </button>
+            <section class="hero-section" data-aos="slide-up">
                 <div class="hero-content flow-lg">
                     <h2 class="text-xl">Nike Adidas <br> SYSY 350</h2>
                     <p>
@@ -109,7 +118,7 @@
                 </div>
             </section>
     
-            <section class="products flow-lg" data-aos="zoom-out">
+            <section class="popular-section flow-lg" data-aos="zoom-out">
                 <h2 class="text-lg text-center">Popular products</h2>
     
                 <ul class="product-list">
@@ -233,7 +242,7 @@
                 <button class="button text-center">Explore</button>
             </section>
     
-            <section class="collection-sectio flow-lg" data-aos="zoom-in">
+            <section class="collection-section flow-lg" data-aos="zoom-in">
                 <h2 class="text-lg text-center">Collections</h2>
                 <div class="collection-grid">
                     <div class="women-collection">
@@ -478,17 +487,17 @@
             once: true
         });
 
-        const menu = document.getElementById("menu");
-        const closeMenu = document.getElementById("close-menu");
-        const buttonMenu = document.getElementById("button-menu");
+        const nav = document.getElementById("nav");
+        const closeNav = document.getElementById("close-nav");
+        const buttonNav = document.getElementById("button-nav");
         
 
-        buttonMenu.addEventListener('click', () => {
-            menu.classList.toggle("show");
+        buttonNav.addEventListener('click', () => {
+            nav.classList.toggle("show");
         })
 
-        closeMenu.addEventListener('click', () => {
-            menu.classList.remove("show");
+        closeNav.addEventListener('click', () => {
+            nav.classList.remove("show");
         })
     </script>
 </body>

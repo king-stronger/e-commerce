@@ -172,6 +172,20 @@ section {
 }
 /****************************** APP *******************************/
 
+.brand {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand button {
+    display: none;
+}
+
+.button-nav {
+    display: none;
+}
+
 .nav {
     width: 325px;
     padding: 2rem;
@@ -245,7 +259,7 @@ section {
 /****************************** HOME *******************************/
 
 
-/****************************** PRODUCT *******************************/
+/****************************** POPULAR & RECENTS*******************************/
 .product-list {
     gap: 3rem;
     display: grid;
@@ -328,7 +342,7 @@ section {
 .old-price {
     text-decoration: line-through;
 }
-/****************************** PRODUCT *******************************/
+/****************************** POPULAR & RECENTS*******************************/
 
 
 /****************************** COLLECTION *******************************/
@@ -442,3 +456,52 @@ section {
     grid-column: span 2;
 }
 /****************************** FOOTER *******************************/
+
+@media (width < 900px){
+    #app {
+        display: grid;
+        position: relative;
+        grid-template-columns: 1fr;
+    }
+
+    #button-nav, #close-nav {
+        display: block;
+    }
+
+    #button-nav {
+        margin-top: 1rem;
+        text-align: left;
+        width: fit-content;
+    }
+
+    #nav {
+        z-index: 100;
+        translate: -110% 0;
+        transition: translate 300ms ease;
+    }
+    
+    #nav.show {
+        translate: 0;
+    }
+}
+
+@media (width < 750px){
+    .hero-section,
+    .suscribe-section {
+        justify-items: center;
+        grid-template-columns: 1fr;
+    }
+
+    .product-list,
+    .collection-grid,
+    .footer {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer .social {
+        grid-column: 1 /-1;
+        display: flex;
+        column-gap: 5rem;
+        justify-content: center;
+    }
+}
