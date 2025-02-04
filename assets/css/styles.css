@@ -471,16 +471,15 @@ section {
         display: block;
     }
 
-    #button-nav {
-        z-index: 50;
+    :has(> #button-nav) {
+        z-index: 90;
+        width: 100%;
+        padding: 1rem;
+        padding: .5rem;
         position: fixed;
-        margin-top: 1rem;
-        text-align: left;
-        width: fit-content;
-        inset: 1rem auto auto 1rem;
         background: white;
-        padding: .25rem;
-        border-radius: 1rem;
+        inset: 0 auto auto 0;
+        box-shadow: 0 0 1px lightgray;
     }
 
     #nav {
@@ -528,7 +527,7 @@ section {
 
 @media (width < 500px){
     #nav {
-        width: 250px;
+        width: 275px;
     }
 
     .women-collection {
@@ -550,7 +549,14 @@ section {
         grid-column: span 1;
     }
 
-    .product-list,
+    .product-list {
+        gap: 1rem;
+    }
+
+    .product {
+        padding: .5rem;
+    }
+
     .collection-grid,
     #footer {
         grid-template-columns: 1fr;

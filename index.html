@@ -31,31 +31,31 @@
                     <ul class="sub-menu">
                         <li class="nav-item">
                             <img src="assets/img/icon/shirt.svg" alt="" class="nav-icon">
-                            <a href="" class="nav-link">Top</a>
+                            <a href="#collections" class="nav-link">Top</a>
                         </li>
                         <li class="nav-item">
                             <img src="assets/img/icon/pants.svg" alt="" class="nav-icon">
-                            <a href="" class="nav-link">Bottoms</a>
+                            <a href="#collections" class="nav-link">Bottoms</a>
                         </li>
                         <li class="nav-item">
                             <img src="assets/img/icon/dress.svg" alt="" class="nav-icon">
-                            <a href="" class="nav-link">Dresses</a>
+                            <a href="#collections" class="nav-link">Dresses</a>
                         </li>
                         <li class="nav-item">
                             <img src="assets/img/icon/outerwear.svg" alt="" class="nav-icon">
-                            <a href="" class="nav-link">Outerwear</a>
+                            <a href="#collections" class="nav-link">Outerwear</a>
                         </li>
                         <li class="nav-item">
                             <img src="assets/img/icon/shoe.svg" alt="" class="nav-icon">
-                            <a href="" class="nav-link">Footwear</a>
+                            <a href="#collections" class="nav-link">Footwear</a>
                         </li>
                         <li class="nav-item">
                             <img src="assets/img/icon/underwear.svg" alt="" class="nav-icon">
-                            <a href="" class="nav-link">Undergarments</a>
+                            <a href="#collections" class="nav-link">Undergarments</a>
                         </li>
                         <li class="nav-item">
                             <img src="assets/img/icon/accessories.svg" alt="" class="nav-icon">
-                            <a href="" class="nav-link">Accessories</a>
+                            <a href="#collections" class="nav-link">Accessories</a>
                         </li>
                     </ul>
                 </li>
@@ -71,23 +71,23 @@
                     <ul class="sub-menu">
                         <li class="nav-item">
                             <img src="assets/img/icon/woman.svg" alt="" class="nav-icon">
-                            <a href="" class="nav-link">Women</a>
+                            <a href="#collections" class="nav-link">Women</a>
                         </li>
                         <li class="nav-item">
                             <img src="assets/img/icon/man.svg" alt="" class="nav-icon">
-                            <a href="" class="nav-link">Men</a>
+                            <a href="#collections" class="nav-link">Men</a>
                         </li>
                         <li class="nav-item">
                             <img src="assets/img/icon/kid.svg" alt="" class="nav-icon">
-                            <a href="" class="nav-link">Kids</a>
+                            <a href="#collections" class="nav-link">Kids</a>
                         </li>
                         <li class="nav-item">
                             <img src="assets/img/icon/shoe.svg" alt="" class="nav-icon">
-                            <a href="" class="nav-link">Unisex</a>
+                            <a href="#collections" class="nav-link">Unisex</a>
                         </li>
                         <li class="nav-item">
                             <img src="assets/img/icon/shirt.svg" alt="" class="nav-icon">
-                            <a href="" class="nav-link">PlusSizes</a>
+                            <a href="#collections" class="nav-link">PlusSizes</a>
                         </li>
                     </ul>
                 </li>
@@ -102,10 +102,12 @@
         </nav>
 
         <div id="main">
-            <button id="button-nav" class="button-nav">
-                <i class='bx bx-menu-alt-left'></i>
-            </button>
-            <section class="hero-section" data-aos="slide-up">
+            <div>
+                <button id="button-nav" class="button-nav" aria-label="button-nav" aria-labelledby="nav">
+                    <i class='bx bx-menu-alt-left'></i>
+                </button>
+            </div>
+            <section class="hero-section" data-aos="slide-up" id="home">
                 <div class="hero-content flow-lg">
                     <h2 class="text-xl">Nike Adidas <br> SYSY 350</h2>
                     <p>
@@ -118,7 +120,7 @@
                 </div>
             </section>
     
-            <section class="popular-section flow-lg" data-aos="zoom-out">
+            <section class="popular-section flow-lg" data-aos="zoom-out" id="popular">
                 <h2 class="text-lg text-center">Popular products</h2>
     
                 <ul class="product-list">
@@ -242,7 +244,7 @@
                 <button class="button text-center">Explore</button>
             </section>
     
-            <section class="collection-section flow-lg" data-aos="zoom-in">
+            <section class="collection-section flow-lg" data-aos="zoom-in" id="collections">
                 <h2 class="text-lg text-center">Collections</h2>
                 <div class="collection-grid">
                     <div class="women-collection">
@@ -297,7 +299,7 @@
                 </div>
             </section>
 
-            <section class="products flow-lg" data-aos="zoom-out">
+            <section class="products flow-lg" data-aos="zoom-out" id="recents">
                 <h2 class="text-lg text-center">Recents products</h2>
     
                 <ul class="product-list">
@@ -429,7 +431,7 @@
                 <button class="button text-center">Shop now</button>
             </section>
     
-            <section class="suscribe-section" data-aos="flip-left">
+            <section class="suscribe-section" data-aos="flip-left" id="suscribe">
                 <div class="suscribe-content flow">
                     <h2 class="text-lg text-center">Suscribe And Get 15% OFF</h2>
                     <p class="text-center">
