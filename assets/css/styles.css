@@ -532,7 +532,14 @@ section {
     }
 
     .suscribe-section {
+        gap: 2rem;
         padding: 2rem 1rem;
+    }
+
+    .suscribe-form {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 1fr;
     }
     
     .footer .main {
@@ -543,5 +550,9 @@ section {
     .collection-grid,
     #footer {
         grid-template-columns: 1fr;
+    }
+
+    .footer .social {
+        column-gap: 2rem;
     }
 }
