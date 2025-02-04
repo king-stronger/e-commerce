@@ -2,9 +2,10 @@
     --flow: 1rem;
 
     --clr-text: #050315;
+    --clr-primary: #050315;
     --clr-background: #fbfbfe;
-    --clr-primary: black;
-    --clr-secondary: #dedcff;
+    --clr-container: #f5f5f5;
+    --clr-secondary: #E0F7FA;
     --clr-accent: #433bff;
 }
 
@@ -176,7 +177,8 @@ section {
     padding: 2rem;
     height: 100svh;
     position: fixed;
-    box-shadow: 0 0 3px lightgray;
+    background-color: var(--clr-container);
+    box-shadow: 0 0 3px var(--clr-container);
 }
 
 .menu {
@@ -202,7 +204,7 @@ section {
     row-gap: 1rem;
     border-radius: 1rem;
     flex-direction: column;
-    background: lightblue;
+    background: var(--clr-secondary);
 }
 
 .nav-link {
@@ -254,11 +256,42 @@ section {
     padding: 1.5rem;
     position: relative;
     border-radius: 1rem;
-    background-color: rgb(226, 247, 253);
-
+    
     gap: 1rem;
     display: flex;
     flex-direction: column;
+}
+
+.product:nth-of-type(1) {
+    background-color: #E0F7FA;
+}
+
+.product:nth-of-type(2) {
+    background-color: #FFEBEE;
+}
+
+.product:nth-of-type(3) {
+    background-color: #E8F5E9;
+}
+
+.product:nth-of-type(4) {
+    background-color: #FFF9C4;
+}
+
+.product:nth-of-type(5) {
+    background-color: #F3E5F5;
+}
+
+.product:nth-of-type(6) {
+    background-color: #FFF3E0;
+}
+
+.product:nth-of-type(7) {
+    background-color: #FFEBEE;
+}
+
+.product:nth-of-type(8) {
+    background-color: #F5F5F5;
 }
 
 .product-info {
@@ -320,8 +353,9 @@ section {
 .shoes-collection,
 .shirts-collection {
     display: grid;
+    border-radius: 1rem;
     grid-template-areas: "stacking";
-
+    background-color: var(--clr-container);
     > * {
         grid-area: stacking;
     }
@@ -366,7 +400,7 @@ section {
 
     padding: 5rem;
     border-radius: 1rem;
-    background-color: #eee;
+    background-color: #f0f0f0;
 }
 /****************************** PROMO *******************************/
 
@@ -381,7 +415,7 @@ section {
     padding: 5rem;
     color: white;
     border-radius: 1rem;
-    background-color: #050315;
+    background-color: var(--clr-primary);
 }
 
 .suscribe-form {
