@@ -230,6 +230,65 @@ section {
 /****************************** PRODUCT *******************************/
 
 
+/****************************** COLLECTION *******************************/
+.collection-grid {
+    gap: 3rem;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.kids-collection {
+    grid-row: span 2;
+}
+
+.kids-collection img {
+    height: 100%;
+}
+
+.kids-collection,
+.women-collection,
+.men-collection,
+.shoes-collection,
+.shirts-collection {
+    display: grid;
+    grid-template-areas: "stacking";
+
+    > * {
+        grid-area: stacking;
+    }
+}
+
+.shadow {
+    z-index: 0;
+    scale: 1 0;
+    width: 100%;
+    opacity: 0.3;
+    height: 100%;
+    transform-origin: bottom;
+    background-color: black;
+    transition: scale 300ms ease;
+}
+
+.view-collection {
+    z-index: 1;
+    scale: 1 0;
+    display: grid;
+    place-items: center;
+    transform-origin: bottom;
+    transition: scale 300ms ease;
+}
+
+.kids-collection:hover :is(.shadow, .view-collection),
+.women-collection:hover :is(.shadow, .view-collection),
+.men-collection:hover :is(.shadow, .view-collection),
+.shoes-collection:hover :is(.shadow, .view-collection),
+.shirts-collection:hover :is(.shadow, .view-collection) {
+    scale: 1 1;
+}
+/****************************** COLLECTION *******************************/
+
+
 /****************************** PROMO *******************************/
 .promo-section {
     display: flex;
