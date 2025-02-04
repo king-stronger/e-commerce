@@ -168,11 +168,7 @@ button, input, textarea, select {
 }
 
 section {
-    margin-block: 10rem;
-}
-
-section:nth-of-type(1) {
-    margin-block: 7rem;
+    margin-block: 7.5rem;
 }
 /****************************** APP *******************************/
 
