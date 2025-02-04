@@ -3,7 +3,7 @@
 
     --clr-text: #050315;
     --clr-background: #fbfbfe;
-    --clr-primary: #2f27ce;
+    --clr-primary: black;
     --clr-secondary: #dedcff;
     --clr-accent: #433bff;
 }
@@ -152,10 +152,17 @@ button, input, textarea, select {
 /****************************** APP *******************************/
 #app {
     display: grid;
+    position: relative;
+    grid-template-columns: 350px 1fr;
+}
+
+#main {
+    display: grid;
+    grid-column: 2 / 3;
     grid-template-columns: 1fr min(1000px, 100% - 3rem) 1fr;
 }
 
-#app > * {
+#main > * {
     grid-column: 2 / 3;
 }
 
@@ -164,7 +171,68 @@ section {
 }
 /****************************** APP *******************************/
 
+.nav {
+    width: 325px;
+    padding: 2rem;
+    height: 100svh;
+    position: fixed;
+    box-shadow: 0 0 3px lightgray;
+}
 
+.menu {
+    height: 90%;
+    display: flex;
+    row-gap: 1.5rem;
+    flex-direction: column;
+}
+
+.sub-menu-container {
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-menu {
+    display: none;
+}
+
+.sub-menu-container:hover .sub-menu {
+    padding: 1rem;
+    display: flex;
+    row-gap: 1rem;
+    border-radius: 1rem;
+    flex-direction: column;
+    background: lightblue;
+}
+
+.nav-link {
+    font-size: 1.2rem;
+}
+
+.nav-item:hover > .nav-link,
+.nav-item:hover > .nav-icon {
+    scale: 1.1;
+    transform-origin: left;
+    color: var(--clr-accent);
+}
+
+.nav-icon {
+    width: 20px;
+}
+
+.nav-item {
+    display: flex;
+    column-gap: .75rem;
+}
+
+.suscribe {
+    margin-top: auto;
+}
+
+.suscribe a {
+    width: 100%;
+    text-align: center;
+}
 /****************************** HOME *******************************/
 .hero-section {
     gap: 5rem;
@@ -238,11 +306,11 @@ section {
     grid-template-columns: repeat(3, 1fr);
 }
 
-.kids-collection {
+.women-collection {
     grid-row: span 2;
 }
 
-.kids-collection img {
+.women-collection img {
     height: 100%;
 }
 
