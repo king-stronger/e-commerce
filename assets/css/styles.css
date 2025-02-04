@@ -48,10 +48,6 @@ a {
     color: var(--clr-text);
 }
 
-a:hover {
-    color: var(--clr-accent);
-}
-
 button, input, textarea, select {
     border: none;
     outline: none;
@@ -64,23 +60,26 @@ button, input, textarea, select {
 /****************************** REUSABLE CSS *******************************/
     /****************************** STRUCTURE *******************************/
     .flow > * + * {
-        display: block;
         margin-top: var(--flow);
     }
 
     .flow-xl > * + * {
-        display: block;
         margin-top: calc(var(--flow) * 10);
     }
 
     .flow-lg > * + * {
-        display: block;
         margin-top: calc(var(--flow) * 2);
     }
 
     .flow-sm > * + * {
-        display: block;
         margin-top: calc(var(--flow) / 2);
+    }
+
+    .flow > *,
+    .flow-lg > *,
+    .flow-sm > *,
+    .flow-xl > * {
+        display: block;
     }
     /****************************** STRUCTURE *******************************/
 
@@ -131,6 +130,17 @@ button, input, textarea, select {
         box-shadow: 0 0 5px 0px var(--clr-secondary);
     }
 
+    .link {
+        cursor: pointer;
+        color: var(--clr-text);
+    }
+
+    .link:hover {
+        scale: 1.2;
+        transform-origin: left;
+        color: var(--clr-accent);
+    }    
+
     .bx {
         font-size: 1.5rem;
     }
@@ -163,6 +173,61 @@ section {
     grid-template-columns: repeat(2, 1fr);
 }
 /****************************** HOME *******************************/
+
+
+/****************************** PRODUCT *******************************/
+.product-list {
+    gap: 3rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.product {
+    padding: 1.5rem;
+    position: relative;
+    border-radius: 1rem;
+    background-color: rgb(226, 247, 253);
+
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product-info div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.product-name {
+    width: 100%;
+    color: white;
+    inset: 0 0 auto;
+    position: absolute;
+    text-align: center;
+    background: black;
+    padding-block: .5rem;
+    
+    scale: 1 0;
+    transform-origin: top;
+    transition: scale 300ms ease;
+}
+
+
+.product:hover .product-name {
+    scale: 1 1;
+}
+
+.old-price {
+    text-decoration: line-through;
+}
+/****************************** PRODUCT *******************************/
 
 
 /****************************** PROMO *******************************/
@@ -208,6 +273,7 @@ section {
 .footer {
     gap: 5rem;
     display: grid;
+    padding-block: 5rem;
     grid-template-columns: repeat(5, 1fr);
 }
 
